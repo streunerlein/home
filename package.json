@@ -1,0 +1,15 @@
+{
+  "name": "my-homepage",
+  "description": "",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "jade": "0.x",
+    "underscore": "*",
+    "marked": "0.x",
+    "glob": "*",
+    "async":"*",
+    "moment":"*"
+  }
+}
