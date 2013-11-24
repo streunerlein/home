@@ -1,4 +1,4 @@
 home
 ====
 
-my personal homepage, nothing fancy.
+my homepage, nothing fancy.
