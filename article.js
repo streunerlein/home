@@ -35,6 +35,9 @@ function getArticles(cb) {
 var Article = function(path) {
   this._path = path;
   this._id = pathmodule.basename(path, ".md");
+  this._metadata = {
+    published: true
+  };
   var art = this;
 
   this.init = function(cb) {
@@ -57,7 +60,11 @@ var Article = function(path) {
             });
 
             art._content = content;
-            art._metadata = metadata;
+            art._metadata = _.extend(art._metadata, metadata);
+
+            if ("published" in metadata) {
+              art._metadata.published = metadata.published != '0';
+            }
 
             cb(null, art);
           }

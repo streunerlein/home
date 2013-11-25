@@ -1,5 +1,6 @@
 
 ul
 	each article in articles
-		li
-			a(href='/' + article.id)= article.title
+		if article.published
+			li
+				a(href='/' + article.id)= article.title
